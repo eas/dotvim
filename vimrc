@@ -171,6 +171,7 @@ map Ю >
 map , ?
 
 map <C-n> :noh<CR>
+map <C-m> <C-w>_
 
 set scrolloff=4
 set expandtab
@@ -180,6 +181,7 @@ set smarttab
 set number
 set nowrap
 set autoindent
+set winminheight=0
 
 " NERDTree mappings
 map <Esc>t :NERDTreeToggle<CR>
