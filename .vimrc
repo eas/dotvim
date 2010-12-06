@@ -169,3 +169,14 @@ map Ь M
 map Б <
 map Ю >
 map , ?
+
+map <C-n> :noh<CR>
+
+set scrolloff=4
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set number
+set nowrap
+set autoindent
