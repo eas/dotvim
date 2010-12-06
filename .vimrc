@@ -185,3 +185,5 @@ set autoindent
 map <Esc>t :NERDTreeToggle<CR>
 map <Esc>c :NERDTreeClose<CR>
 au VimEnter *  NERDTree
+
+colorscheme metacosm
