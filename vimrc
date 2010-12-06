@@ -180,6 +180,7 @@ set number
 set nowrap
 set autoindent
 set winminheight=0
+set winminwidth=0
 
 " NERDTree mappings
 map <Esc>t :NERDTreeToggle<CR>
