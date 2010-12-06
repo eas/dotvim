@@ -5,3 +5,5 @@ function! GnuIndent()
    setlocal tabstop=8 
 endfunction 
 call GnuIndent() 
+
+set tags+=~/.vim/systags
