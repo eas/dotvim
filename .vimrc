@@ -180,3 +180,8 @@ set smarttab
 set number
 set nowrap
 set autoindent
+
+" NERDTree mappings
+map <Esc>t :NERDTreeToggle<CR>
+map <Esc>c :NERDTreeClose<CR>
+au VimEnter *  NERDTree
