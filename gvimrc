@@ -57,3 +57,5 @@ if version >= 500
   "highlight Special gui=NONE guibg=grey95
 
 endif
+" No error bell or flash
+set visualbell t_vb=
