@@ -100,6 +100,9 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+map <S-Return> :tabnew<CR>
+map <S-Right> :tabnext<CR>
+map <S-Left>  :tabprev<CR>
 
 map ё `
 map й q
