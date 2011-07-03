@@ -59,3 +59,4 @@ if version >= 500
 endif
 " No error bell or flash
 set visualbell t_vb=
+set guioptions-=T
