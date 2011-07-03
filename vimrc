@@ -1,3 +1,7 @@
+" Init pathogen
+call pathogen#runtime_append_all_bundles()
+
+
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -95,6 +99,8 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+" My changes start here
+
 " For better switching between windows
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -179,7 +185,6 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set smarttab
-set number
 set nowrap
 set autoindent
 set winminheight=0
@@ -189,13 +194,14 @@ set tildeop
 " NERDTree mappings
 map <Esc>t :NERDTreeToggle<CR>
 map <Esc>c :NERDTreeClose<CR>
-au VimEnter *  NERDTree
+"au VimEnter *  NERDTree
 
 colorscheme metacosm
 
 " auto close options when exiting insert mode
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 set completeopt=menu,menuone,preview
+
 " -- configs --
 let OmniCpp_MayCompleteDot = 1 " autocomplete with .
 let OmniCpp_MayCompleteArrow = 1 " autocomplete with ->
@@ -203,5 +209,11 @@ let OmniCpp_MayCompleteScope = 1 " autocomplete with ::
 let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert)
 let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files
 let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
+autocmd FileType python set omnifunc=pythoncomplete#Complete
 
-let runview_filtcmd = "bash"
+"set foldlevel=0
+"set foldmethod=indent
+
+let python_highlight_all = 1
+
+map <F12> <ESC>:ConqueTermSplit bash<CR>
