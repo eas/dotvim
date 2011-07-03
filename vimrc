@@ -217,3 +217,5 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 let python_highlight_all = 1
 
 map <F12> <ESC>:ConqueTermSplit bash<CR>
+let mapleader = ","
+au BufEnter *.hs compiler ghc
