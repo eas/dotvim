@@ -219,3 +219,7 @@ let python_highlight_all = 1
 map <F12> <ESC>:ConqueTermSplit bash<CR>
 let mapleader = ","
 au BufEnter *.hs compiler ghc
+
+" Not sure if it works
+set path=$PWD/**
+set tags=./tags,./**/tags,~/.vim/systags
