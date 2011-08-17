@@ -218,7 +218,14 @@ let python_highlight_all = 1
 
 map <F12> <ESC>:ConqueTermSplit bash<CR>
 let mapleader = ","
+
+" For haskellmode
 au BufEnter *.hs compiler ghc
+"TODO: It is True only for home system
+let g:haddock_browser="/usr/bin/google-chrome"
+let maplocalleader='\'
+"TODO: Could it be automated? - to see the sources
+map <LocalLeader>r :GHCReload<CR>
 
 " Not sure if it works
 set path=$PWD/**
