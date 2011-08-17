@@ -237,3 +237,6 @@ map <LocalLeader>r :GHCReload<CR>
 " Not sure if it works
 set path=$PWD/**
 set tags=./tags,./**/tags,~/.vim/systags
+
+" Source vimrc upon writing it
+au BufWritePost *vimrc source $MYVIMRC
