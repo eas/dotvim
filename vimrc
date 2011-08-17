@@ -240,3 +240,6 @@ set tags=./tags,./**/tags,~/.vim/systags
 
 " Source vimrc upon writing it
 au BufWritePost *vimrc source $MYVIMRC
+
+" Netrw settings
+let g:netrw_liststyle = 3
