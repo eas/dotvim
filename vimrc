@@ -106,6 +106,8 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+"TODO: problems with ssh
 map <S-Return> :tabnew<CR>
 map <S-Right> :tabnext<CR>
 map <S-Left>  :tabprev<CR>
@@ -178,7 +180,8 @@ map Б <
 map Ю >
 
 map <C-n> :noh<CR>
-map <C-m> <C-w>_
+"TODO: prevents correct work with Quick Fixes
+"map <C-m> <C-w>_
 
 set scrolloff=4
 set expandtab
@@ -190,6 +193,7 @@ set autoindent
 set winminheight=0
 set winminwidth=0
 set tildeop
+set number
 
 " NERDTree mappings
 map <Esc>t :NERDTreeToggle<CR>
@@ -217,6 +221,8 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 let python_highlight_all = 1
 
 map <F12> <ESC>:ConqueTermSplit bash<CR>
+
+" is it for NERDCommenter?
 let mapleader = ","
 
 " For haskellmode
