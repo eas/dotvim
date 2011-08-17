@@ -198,6 +198,7 @@ set number
 " NERDTree mappings
 map <Esc>t :NERDTreeToggle<CR>
 map <Esc>c :NERDTreeClose<CR>
+let NERDTreeIgnore=['\.o$', '\.hi$', '\~$', '\.swp$']
 "au VimEnter *  NERDTree
 
 colorscheme metacosm
