@@ -1,5 +1,7 @@
 " Init pathogen
-call pathogen#runtime_append_all_bundles()
+set nocompatible
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 
 " An example for a vimrc file.
