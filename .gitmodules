@@ -52,3 +52,6 @@
 [submodule "bundle/wombat"]
 	path = bundle/wombat
 	url = https://github.com/cschlueter/vim-wombat.git
+[submodule "bundle/sketch"]
+	path = bundle/sketch
+	url = https://github.com/vim-scripts/sketch.vim.git
