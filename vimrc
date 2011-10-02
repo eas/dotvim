@@ -248,3 +248,17 @@ let g:netrw_liststyle = 3
 
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+map <F3>  :call TRANSLATE()<cr>
+function! TRANSLATE()
+   let  a=getline('.')
+   let co=col('.')-1
+   let starts=strridx(a," ",co)
+   let ends = stridx(a," ",co)
+   if ends==-1
+       let ends=strlen(a)
+   endif
+   let res = strpart(a,starts+1,ends-starts)
+   let cmds = "sdcv -n " . res
+   let out = system(cmds)
+   call append(line('.'), split(out, "\n"))
+endfunction
