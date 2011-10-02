@@ -1,27 +1,27 @@
 # Case statement
 snippet case
 	case ${1:expression} is
-	  when ${2:choices} =>
-	    ${3:--sequential statement(s)};
-	  when ${4:choice2} =>
-	    ${5:--sequential statement(s)};
-	  ${6:--...}
+	    when ${2:choices} =>
+	        ${3:--sequential statement(s)};
+	    when ${4:choice2} =>
+	        ${5:--sequential statement(s)};
+	    ${6:--...}
 	end case;
 
 # Component declaration
 snippet comp
 	component ${1:identifier} is
-	  port (
-	    ${2:--I/O}
-	  );
+	    port (
+	        ${2:--I/O}
+	    );
 	end component $1;
 
 # Component instantiation
 snippet compinst
 	$1_inst : ${1:--component name}
-	  port map (
-	    ${2:-- component_port => port_association,}
-	  );
+	    port map (
+	        ${2:-- component_port => port_association,}
+	    );
 
 # Constant declaration
 snippet const
@@ -31,63 +31,63 @@ snippet const
 snippet ff
 	process(${1:clk}) is
 	begin
-	  if (rising_edge($1)) then
-	    ${2:sigR} <= ${3:sig};
-	  end if;
+	    if (rising_edge($1)) then
+	        ${2:sigR} <= ${3:sig};
+	    end if;
 	end process;
 
 # D Flip Flop process with asynch. reset
 snippet ffr
 	process(${1:clk}, ${2:rst}) is
 	begin
-	  if ($2 = ${3:'0'}) then
-	    ${4:sigR} <= ${5:'0'};
-	  elsif (rising_edge($1)) then
-	    $4 <= ${6:sig};
-	  end if;
+	    if ($2 = ${3:'0'}) then
+	        ${4:sigR} <= ${5:'0'};
+	    elsif (rising_edge($1)) then
+	        $4 <= ${6:sig};
+	    end if;
 	end process;
 
 # D Flip Flop process with asynch. reset and clock enable
 snippet ffre
 	process(${1:clk}, ${2:rst}) is
 	begin
-	  if ($2 = ${3:'0'}) then
-	    ${4:sigR} <= ${5:'0'};
-	  elsif (rising_edge($1)) then
-	    if (${6:clkEn} = ${7:'1'}) then
-	      $4 <= ${8:sig};
+	    if ($2 = ${3:'0'}) then
+	        ${4:sigR} <= ${5:'0'};
+	    elsif (rising_edge($1)) then
+	        if (${6:clkEn} = ${7:'1'}) then
+	            $4 <= ${8:sig};
+	        end if;
 	    end if;
-	  end if;
 	end process;
 
 # Entity declaration (no generic)
 snippet ent
 	entity ${1:<ent_name>} is
-	  port (
-	    ${2:--I/O}
-	  );
+	    port (
+	        ${2:--I/O}
+	    );
 	end entity $1;
 	
 	architecture ${3:rtl} of $1 is
 	
 	begin
-	  ${4}
+	    ${4}
 	end $3;
 
 # If Condition
 snippet if
 	if (${1:--condition}) then
-	  ${2:--do something};
+	    ${2:--do something};
 	end if;
 
 # Else if...
 snippet elif
 	elsif (${1:--condition}) then
-	  ${2:--do something else};
+	    ${2:--do something else};
 # Else
 snippet el
 	else
-	  ${1:--do something else};
+	    ${1:--do something else};
 
 # library ieee
 snippet lib
@@ -98,7 +98,7 @@ snippet lib
 snippet proc
 	${1:proc name} : process is
 	begin
-	  ${2:--sequential statements;}
+	    ${2:--sequential statements;}
 	end process $1;
 
 # Signal declaration
@@ -124,3 +124,9 @@ snippet st
 # (others => '0')
 snippet oth
 	(others => '0')${1}
+
+# Generate statement
+snippet gen
+	${1:Label} : for ${2:I} in ${3:range} generate
+		${4}
+	end generate;
