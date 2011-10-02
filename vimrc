@@ -262,3 +262,23 @@ function! TRANSLATE()
    let out = system(cmds)
    call append(line('.'), split(out, "\n"))
 endfunction
+
+"Mappings to scroll other window
+fun! ScrollOtherWindow(dir)
+    if a:dir == "down"
+        let move = "\<C-E>"
+    elseif a:dir == "up"
+        let move = "\<C-Y>"
+    endif
+    exec "normal \<C-W>p" . move . "\<C-W>p"
+endfun
+nmap <silent> <M-Down> :call ScrollOtherWindow("down")<CR>
+nmap <silent> <M-Up> :call ScrollOtherWindow("up")<CR>
+imap <silent> <M-Down> <ESC>:call ScrollOtherWindow("down")<CR>a
+imap <silent> <M-Up> <ESC>:call ScrollOtherWindow("up")<CR>a
+nmap <silent> <M-j> :call ScrollOtherWindow("down")<CR>
+nmap <silent> <M-k> :call ScrollOtherWindow("up")<CR>
+imap <silent> <M-j> <ESC>:call ScrollOtherWindow("down")<CR>a
+imap <silent> <M-k> <ESC>:call ScrollOtherWindow("up")<CR>a
+imap <silent> <C-j> <ESC>:call ScrollOtherWindow("down")<CR>a
+imap <silent> <C-k> <ESC>:call ScrollOtherWindow("up")<CR>a
