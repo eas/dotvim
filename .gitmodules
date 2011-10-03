@@ -45,7 +45,7 @@
 	url = https://github.com/lukerandall/haskellmode-vim.git
 [submodule "bundle/indent-guides"]
 	path = bundle/indent-guides
-	url = git://github.com/nathanaelkane/vim-indent-guides.git
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "bundle/colorsupport"]
 	path = bundle/colorsupport
 	url = https://github.com/vim-scripts/colorsupport.vim.git
