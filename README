@@ -1,0 +1,19 @@
+Installation:
+
+  Unix:
+    git clone https://github.com/eas/dotvim.git ~/.vim
+    cd ~/.vim
+    git submodule init
+    git submodule update
+    echo "runtime vimrc" > ~/.vimrc
+
+  Windows:
+    set HOME=%HOMEDRIVE%%HOMEPATH%
+    git clone https://github.com/eas/dotvim.git "%HOME%\vimfiles"
+    cd "%HOME%\vimfiles"
+    git submodule init
+    git submodule update
+    echo "runtime vimrc" > "%HOME%\_vimrc"
+
+Update:
+  git submodule foreach pull origin master
