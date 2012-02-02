@@ -16,4 +16,4 @@ Installation:
     echo "runtime vimrc" > "%HOME%\_vimrc"
 
 Update:
-  git submodule foreach pull origin master
+  git submodule foreach git pull [origin master]
