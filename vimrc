@@ -283,7 +283,7 @@ imap <silent> <M-k> <ESC>:call ScrollOtherWindow("up")<CR>a
 imap <silent> <C-j> <ESC>:call ScrollOtherWindow("down")<CR>a
 imap <silent> <C-k> <ESC>:call ScrollOtherWindow("up")<CR>a
 
-hi link EasyMotiokTarget ErrorMsg
+hi link EasyMotionTarget ErrorMsg
 
 map <Leader>f :FufCoverageFile<CR>
 map <Leader>F :FufFile<CR>
