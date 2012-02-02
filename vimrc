@@ -282,3 +282,5 @@ imap <silent> <M-j> <ESC>:call ScrollOtherWindow("down")<CR>a
 imap <silent> <M-k> <ESC>:call ScrollOtherWindow("up")<CR>a
 imap <silent> <C-j> <ESC>:call ScrollOtherWindow("down")<CR>a
 imap <silent> <C-k> <ESC>:call ScrollOtherWindow("up")<CR>a
+
+hi link EasyMotionTarget ErrorMsg
