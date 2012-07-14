@@ -43,9 +43,6 @@
 [submodule "bundle/indent-guides"]
 	path = bundle/indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "bundle/colorsupport"]
-	path = bundle/colorsupport
-	url = https://github.com/vim-scripts/colorsupport.vim.git
 [submodule "bundle/wombat"]
 	path = bundle/wombat
 	url = https://github.com/cschlueter/vim-wombat.git
